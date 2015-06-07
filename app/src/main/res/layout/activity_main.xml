@@ -32,7 +32,12 @@
             android:id="@+id/btnSnackbarDemo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="5dp"
             android:text="SnackbarDemoActivity" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="TabLayoutDemo"
+            android:id="@+id/btnTabLayoutDemo" />
     </LinearLayout>
 </RelativeLayout>

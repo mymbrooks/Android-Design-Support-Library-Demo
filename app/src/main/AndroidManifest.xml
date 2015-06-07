@@ -25,6 +25,9 @@
         <activity
             android:name=".SnackbarDemoActivity"
             android:label="SnackbarDemo" />
+        <activity
+            android:name=".TabLayoutDemoActivity"
+            android:label="TabLayoutDemo" />
     </application>
 
 </manifest>

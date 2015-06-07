@@ -27,6 +27,10 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Button btnSnackbarDemo = (Button) findViewById(R.id.btnSnackbarDemo);
         btnSnackbarDemo.setOnClickListener(this);
         btnSnackbarDemo.setTransformationMethod(null);
+
+        Button btnTabLayoutDemo = (Button) findViewById(R.id.btnTabLayoutDemo);
+        btnTabLayoutDemo.setOnClickListener(this);
+        btnTabLayoutDemo.setTransformationMethod(null);
     }
 
     @Override
@@ -67,6 +71,11 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
             case R.id.btnSnackbarDemo:
                 intent = new Intent();
                 intent.setClass(MainActivity.this, SnackbarDemoActivity.class);
+                startActivity(intent);
+                break;
+            case R.id.btnTabLayoutDemo:
+                intent = new Intent();
+                intent.setClass(MainActivity.this, TabLayoutDemoActivity.class);
                 startActivity(intent);
                 break;
             default:
