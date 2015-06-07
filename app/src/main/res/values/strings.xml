@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">AndroidMDemo</string>
+
+    <string name="hello_world">Hello world!</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_main2">Main2Activity</string>
+    <string name="title_activity_floating_action_button_demo">FloatingActionButtonDemoActivity
+    </string>
+    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_snackbar_demo">SnackbarDemoActivity</string>
+</resources>
