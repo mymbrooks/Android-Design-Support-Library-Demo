@@ -28,6 +28,9 @@
         <activity
             android:name=".TabLayoutDemoActivity"
             android:label="TabLayoutDemo" />
+        <activity
+            android:name=".CoordinatorLayoutDemoActivity"
+            android:label="@string/title_activity_coordinator_layout_demo" />
     </application>
 
 </manifest>

@@ -9,4 +9,5 @@
     <string name="title_activity_main">MainActivity</string>
     <string name="title_activity_snackbar_demo">SnackbarDemoActivity</string>
     <string name="title_activity_tab_layout_demo">TabLayoutDemoActivity</string>
+    <string name="title_activity_coordinator_layout_demo">CoordinatorLayoutDemoActivity</string>
 </resources>

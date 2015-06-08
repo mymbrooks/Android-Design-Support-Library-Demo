@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/navigation_subheader"
+        android:title="Android Design Support Library">
+        <menu>
+            <item
+                android:id="@+id/navigation_sub_item_1"
+                android:icon="@mipmap/ic_today_black_48dp"
+                android:title="TextInputLayout" />
+            <item
+                android:id="@+id/navigation_sub_item_2"
+                android:icon="@mipmap/ic_view_headline_black_48dp"
+                android:title="FloatingActionButton" />
+            <item
+                android:id="@+id/navigation_sub_item_3"
+                android:icon="@mipmap/ic_trending_down_black_36dp"
+                android:title="Snackbar" />
+            <item
+                android:id="@+id/navigation_sub_item_4"
+                android:icon="@mipmap/ic_view_module_black_48dp"
+                android:title="TabLayout" />
+        </menu>
+    </item>
+</menu>

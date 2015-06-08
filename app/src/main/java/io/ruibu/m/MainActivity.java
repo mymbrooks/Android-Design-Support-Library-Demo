@@ -1,85 +1,81 @@
 package io.ruibu.m;
 
 import android.content.Intent;
+import android.support.design.widget.NavigationView;
+import android.support.v4.view.GravityCompat;
+import android.support.v4.widget.DrawerLayout;
+import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.Menu;
+import android.support.v7.widget.Toolbar;
 import android.view.MenuItem;
-import android.view.View;
-import android.widget.Button;
 
-public class MainActivity extends AppCompatActivity implements View.OnClickListener {
+public class MainActivity extends AppCompatActivity {
     private Intent intent;
+    private DrawerLayout dl;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Button btnTextInputLayoutDemo = (Button) findViewById(R.id.btnTextInputLayoutDemo);
-        btnTextInputLayoutDemo.setTransformationMethod(null);
-        btnTextInputLayoutDemo.setOnClickListener(this);
+        dl = (DrawerLayout) findViewById(R.id.dl);
 
-        Button btnFloatingActionButtonDemo = (Button) findViewById(R.id.btnFloatingActionButtonDemo);
-        btnFloatingActionButtonDemo.setOnClickListener(this);
-        btnFloatingActionButtonDemo.setTransformationMethod(null);
+        Toolbar toolbar = (Toolbar) findViewById(R.id.tb);
+        setSupportActionBar(toolbar);
+        final ActionBar actionBar = getSupportActionBar();
 
-        Button btnSnackbarDemo = (Button) findViewById(R.id.btnSnackbarDemo);
-        btnSnackbarDemo.setOnClickListener(this);
-        btnSnackbarDemo.setTransformationMethod(null);
+        if (actionBar != null) {
+            actionBar.setHomeAsUpIndicator(R.mipmap.ic_menu_black_24dp);
+            actionBar.setDisplayHomeAsUpEnabled(true);
+        }
 
-        Button btnTabLayoutDemo = (Button) findViewById(R.id.btnTabLayoutDemo);
-        btnTabLayoutDemo.setOnClickListener(this);
-        btnTabLayoutDemo.setTransformationMethod(null);
-    }
+        NavigationView nv = (NavigationView) findViewById(R.id.nv);
+        nv.setNavigationItemSelectedListener(new NavigationView.OnNavigationItemSelectedListener() {
+            @Override
+            public boolean onNavigationItemSelected(MenuItem menuItem) {
+                switch (menuItem.getItemId()) {
+                    case R.id.navigation_sub_item_1:
+                        intent = new Intent();
+                        intent.setClass(MainActivity.this, TextInputLayoutDemoActivity.class);
+                        startActivity(intent);
+                        break;
+                    case R.id.navigation_sub_item_2:
+                        intent = new Intent();
+                        intent.setClass(MainActivity.this, FloatingActionButtonDemoActivity.class);
+                        startActivity(intent);
+                        break;
+                    case R.id.navigation_sub_item_3:
+                        intent = new Intent();
+                        intent.setClass(MainActivity.this, SnackbarDemoActivity.class);
+                        startActivity(intent);
+                        break;
+                    case R.id.navigation_sub_item_4:
+                        intent = new Intent();
+                        intent.setClass(MainActivity.this, TabLayoutDemoActivity.class);
+                        startActivity(intent);
+                        break;
+                    default:
+                        break;
+                }
 
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
-        return true;
+                dl.closeDrawers();
+
+                return false;
+            }
+        });
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
-        int id = item.getItemId();
-
-        //noinspection SimplifiableIfStatement
-        if (id == R.id.action_settings) {
-            return true;
-        }
-
-        return super.onOptionsItemSelected(item);
-    }
-
-    @Override
-    public void onClick(View v) {
-        switch (v.getId()) {
-            case R.id.btnTextInputLayoutDemo:
-                intent = new Intent();
-                intent.setClass(MainActivity.this, TextInputLayoutDemoActivity.class);
-                startActivity(intent);
-                break;
-            case R.id.btnFloatingActionButtonDemo:
-                intent = new Intent();
-                intent.setClass(MainActivity.this, FloatingActionButtonDemoActivity.class);
-                startActivity(intent);
-                break;
-            case R.id.btnSnackbarDemo:
-                intent = new Intent();
-                intent.setClass(MainActivity.this, SnackbarDemoActivity.class);
-                startActivity(intent);
-                break;
-            case R.id.btnTabLayoutDemo:
-                intent = new Intent();
-                intent.setClass(MainActivity.this, TabLayoutDemoActivity.class);
-                startActivity(intent);
+        switch (item.getItemId()) {
+            case android.R.id.home:
+                dl.openDrawer(GravityCompat.START);
                 break;
             default:
                 break;
         }
+
+        return true;
     }
 }

@@ -13,7 +13,8 @@
         android:id="@+id/fbtn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_centerInParent="true"
         android:src="@mipmap/ic_favorite_border_white_48dp"
-        design:fabSize="mini" />
+        design:fabSize="mini"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true" />
 </RelativeLayout>
