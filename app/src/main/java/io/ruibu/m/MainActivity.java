@@ -23,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.tb);
         setSupportActionBar(toolbar);
-        final ActionBar actionBar = getSupportActionBar();
+        ActionBar actionBar = getSupportActionBar();
 
         if (actionBar != null) {
             actionBar.setHomeAsUpIndicator(R.mipmap.ic_menu_black_24dp);
@@ -53,6 +53,11 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.navigation_sub_item_4:
                         intent = new Intent();
                         intent.setClass(MainActivity.this, TabLayoutDemoActivity.class);
+                        startActivity(intent);
+                        break;
+                    case R.id.navigation_sub_item_5:
+                        intent = new Intent();
+                        intent.setClass(MainActivity.this, CoordinatorLayoutDemoActivity.class);
                         startActivity(intent);
                         break;
                     default:

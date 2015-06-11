@@ -20,6 +20,10 @@
                 android:id="@+id/navigation_sub_item_4"
                 android:icon="@mipmap/ic_view_module_black_48dp"
                 android:title="TabLayout" />
+            <item
+                android:id="@+id/navigation_sub_item_5"
+                android:icon="@mipmap/ic_reorder_black_48dp"
+                android:title="CoordinatorLayout" />
         </menu>
     </item>
 </menu>
