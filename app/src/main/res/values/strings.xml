@@ -10,4 +10,7 @@
     <string name="title_activity_snackbar_demo">SnackbarDemoActivity</string>
     <string name="title_activity_tab_layout_demo">TabLayoutDemoActivity</string>
     <string name="title_activity_coordinator_layout_demo">CoordinatorLayoutDemoActivity</string>
+
+<!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
 </resources>

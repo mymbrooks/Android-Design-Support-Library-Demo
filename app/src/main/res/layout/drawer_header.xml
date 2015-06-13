@@ -1,37 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="150dp"
     android:background="@mipmap/head"
     android:fitsSystemWindows="true">
 
-    <ImageView
-        android:id="@+id/imgHead"
-        android:layout_width="70dp"
-        android:layout_height="70dp"
-        android:layout_marginLeft="20dp"
-        android:layout_marginTop="20dp"
-        android:src="@mipmap/ic_face_white" />
-
-    <TextView
-        android:id="@+id/tvUserName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/imgHead"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="20dp"
-        android:text="徐州瑞步科技"
-        android:textColor="#FFFFFF"
-        android:textSize="18sp" />
-
-    <TextView
-        android:id="@+id/tvEmail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/tvUserName"
-        android:layout_marginLeft="10dp"
-        android:layout_marginTop="5dp"
-        android:text="wangsen@ruibu.info"
-        android:textColor="#FFFFFF"
-        android:textSize="18sp" />
 </RelativeLayout>

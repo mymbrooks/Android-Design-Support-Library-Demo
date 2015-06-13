@@ -1,21 +1,18 @@
-<CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/view"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingBottom="@dimen/activity_vertical_margin"
-    android:paddingLeft="@dimen/activity_horizontal_margin"
-    android:paddingRight="@dimen/activity_horizontal_margin"
-    android:paddingTop="@dimen/activity_vertical_margin"
+    android:layout_alignParentStart="true"
+    android:layout_alignParentTop="true"
+    android:fitsSystemWindows="true"
     tools:context="io.ruibu.m.CoordinatorLayoutDemoActivity">
 
-    <!--第一部分：伸缩工具栏-->
     <android.support.design.widget.AppBarLayout
-        android:id="@+id/appbar"
+        android:id="@+id/app_bar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:fitsSystemWindows="true"
-        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+        android:layout_height="200dp">
 
         <android.support.design.widget.CollapsingToolbarLayout
             android:id="@+id/collapsing_toolbar"
@@ -28,7 +25,7 @@
             app:layout_scrollFlags="scroll|exitUntilCollapsed">
 
             <ImageView
-                android:id="@+id/backdrop"
+                android:id="@+id/back_drop"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:fitsSystemWindows="true"
@@ -40,14 +37,13 @@
                 android:id="@+id/toolbar"
                 android:layout_width="match_parent"
                 android:layout_height="?attr/actionBarSize"
-                app:layout_collapseMode="pin"
-                app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+                android:textColor="@color/text_primary"
+                app:layout_collapseMode="pin" />
 
         </android.support.design.widget.CollapsingToolbarLayout>
 
     </android.support.design.widget.AppBarLayout>
 
-    <!--第二部分：主要内容，NestedScrollView和ScrollView基本功能一致，只不过NestedScrollView可以兼容新的控件-->
     <android.support.v4.widget.NestedScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -56,10 +52,28 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:orientation="vertical"
-            android:paddingTop="24dp">
+            android:orientation="vertical">
+
+            <android.support.v7.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="15dp"
+                app:cardCornerRadius="8dp">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingExtra="8dp"
+                    android:padding="10dp"
+                    android:text="《孤岛危机》系列一直以让玩家惊艳的超细腻画面作为卖点，同时辅以让更多人大骂硬件厂商和开发商狼狈为奸的怪兽级引擎和所需要的硬件配置最为噱头。玩家们面对着如此绚丽的游戏画面，对所谓的游戏性，故事剧情也就随之忽视。在即将结束的2月份，新一轮的“显卡杀手3”也来到了玩家面前，多的不用说，危机3再一次考验了玩家们PC配置，强大的画面让玩家提前感受到了次时代游戏画面的气息，同时本时代主机的机能也被榨干至极限。
+《孤岛危机3》采用了最新的CryEngine 3.4引擎开发，支持更多强悍的DX11特效。但从画面上来讲，目前很少有游戏能够望其项背。拟真动态阴影模糊变化，实时全局光照及GI高光反射效果，强大的水面细分效果，高精度人物细分与植被细分，高分辨率的贴图材质和建模。游戏整体画面清晰亮丽，你会不由自主的感慨全最高特效和分辨率效果下的瑰丽的纽约丛林风光。绚丽的光影效果，细致到每一根草叶的植被，热带雨林和城市废墟有机地结合到了一起，造就了独一无二的游戏世界。堪称CG级的游戏画面，很多时候你真的分不清《孤岛危机3》中的CG和实际游戏画面到底有什么差别。强大的AI系统，高级动作捕捉和细腻的面部捕捉让人物形象栩栩如生。
+《孤岛危机》系列一直都标志着PC硬件技术的进步，这不仅是对桌面图形领域进步的一大贡献，更是对整个PC图形软硬件体系的一次救赎和革命。"
+                    android:textSize="18sp" />
+
+            </android.support.v7.widget.CardView>
 
         </LinearLayout>
 
     </android.support.v4.widget.NestedScrollView>
-</CoordinatorLayout>
+
+</android.support.design.widget.CoordinatorLayout>

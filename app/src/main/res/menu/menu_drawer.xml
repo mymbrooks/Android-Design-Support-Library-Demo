@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/navigation_subheader"
-        android:title="Android Design Support Library">
+        android:id="@+id/drawer_header"
+        android:title="Crysis 3">
         <menu>
             <item
                 android:id="@+id/navigation_sub_item_1"
